@@ -1,7 +1,7 @@
 {
   "name": "@bookingjini-labs/bookingjini-icons",
   "description": "A custom icon font library for BookingJini",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/fonts/bookingjini-icons.css",
   "exports": {
     "./bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css"
