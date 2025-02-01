@@ -41,7 +41,7 @@ npm install @bookingjini-labs/bookingjini-icons
 Then, in your CSS:
 
 ```css
-import "bookingjini-icons/dist/fonts/bookingjini-icons.css";
+import "@bookingjini-labs/bookingjini-icons/bookingjini-icons.css";
 ```
 
 ## 📦 Use the Icon Library via CDN
@@ -50,7 +50,10 @@ You can use the BookingJini Icons library without installing it by including the
 
 ```html
 <!-- Add this inside your HTML file -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bookingjini-icons/dist/fonts/bookingjini-icons.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@bookingjini-labs/bookingjini-icons/dist/fonts/bookingjini-icons.css"
+/>
 ```
 
 You can use the icons in your HTML like this:
@@ -129,9 +132,7 @@ The `package.json` file defines project metadata and scripts. Below is a breakdo
   "exports": {
     "./bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css"
   },
-  "files": [
-    "dist/fonts/"
-  ],
+  "files": ["dist/fonts/"],
   "publishConfig": {
     "access": "public"
   },
@@ -153,7 +154,7 @@ The `package.json` file defines project metadata and scripts. Below is a breakdo
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ramanujamgond/bookingjini-icons.git"
-  },
+  }
 }
 ```
 
