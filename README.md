@@ -11,6 +11,10 @@
 
 The **BookingJini Icons** project is a structured repository for converting **SVG icons to web fonts** using `fantasticon`, `svgo`, and `oslllo-svg-fixer`. This project follows an automated workflow to ensure smooth processing, optimization, and publishing of the icons to npm.
 
+## 📌 Icons
+
+For a structured list of all available icons, refer to the [Icons Table](./icons-list/README.md).
+
 ## 💾 Installation
 
 Ensure you have **Node.js 20.13.1** installed.
