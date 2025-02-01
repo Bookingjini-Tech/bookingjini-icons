@@ -59,7 +59,7 @@ You can use the BookingJini Icons library without installing it by including the
 You can use the icons in your HTML like this:
 
 ```sh
-<i class="icon-home"></i>
+<i class="icon-ac-fill"></i>
 ```
 
 ### 📌 Note
