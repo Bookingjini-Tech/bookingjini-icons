@@ -1,0 +1,4 @@
+src/                  # Exclude raw SVGs from npm package
+scripts/              # Exclude build scripts
+.github/              # Exclude GitHub workflows
+svgo.config.js        # Exclude development config

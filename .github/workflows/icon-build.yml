@@ -1,0 +1,37 @@
+name: Icon Publish
+
+on: [push]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.13.1] # Updated Node.js version
+
+    steps:
+      - uses: actions/checkout@v3 # Updated to latest checkout version
+
+      - name: Use Node.js ${{ matrix.node-version }} 🚀
+        uses: actions/setup-node@v3 # Updated to latest setup-node action
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm" # Caches dependencies for faster builds
+
+      - name: Install Dependencies and Build
+        run: |
+          npm ci
+          npm run build  # 🔥 Build fonts & CSS inside dist/
+        env:
+          CI: true
+
+      - name: Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,44 @@
+{
+  "name": "@bookingjini/bookingjini-icons",
+  "description": "A custom icon font library for BookingJini",
+  "version": "1.0.0",
+  "main": "dist/fonts/bookingjini-icons.css",
+  "exports": {
+    "./bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css"
+  },
+  "files": [
+    "dist/fonts/"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run icons:fix && npm run icons:compress && npm run icons:font",
+    "icons:fix": "node node_modules/oslllo-svg-fixer/src/cli.js -s=src/svg -d=dist/svg",
+    "icons:compress": "svgo dist/svg -o dist/svg --config=svgo.config.js",
+    "icons:font": "fantasticon"
+  },
+  "dependencies": {
+    "oslllo-svg-fixer": "^5.0.0"
+  },
+  "devDependencies": {
+    "fantasticon": "^1.2.3",
+    "svgo": "^3.3.2"
+  },
+  "keywords": [
+    "SVG to Font",
+    "Web Fonts",
+    "Icon Library",
+    "SVG Optimization",
+    "Automated Icon Processing",
+    "BookingJini Icons",
+    "Custom Web Fonts",
+    "Open Source Icon Font",
+    "Automated SVG to Font Conversion",
+    "Fantasticon",
+    "SVG Compression"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "The BookingJini Icons project is a structured repository for converting SVG icons to web fonts using `fantasticon`, `svgo`, and `oslllo-svg-fixer`. This project follows an automated workflow to ensure smooth processing, optimization, and publishing of the icons to npm."
+  },
+  "author": "Ramanujam Gond"
+}

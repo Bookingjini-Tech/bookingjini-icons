@@ -1,0 +1,3 @@
+node_modules/
+dist/                 # Ignore generated files in GitHub (will be built in workflow)
+*.log
