@@ -7,7 +7,9 @@
     ".": {
       "import": "./dist/fonts/bookingjini-icons.css",
       "default": "./dist/fonts/bookingjini-icons.css"
-    }
+    },
+    "./fonts/bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css",
+    "./fonts": "./dist/fonts"
   },
   "files": [
     "dist/fonts/"
