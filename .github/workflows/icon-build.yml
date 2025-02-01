@@ -37,7 +37,7 @@ jobs:
         run: npx semantic-release
 
       - name: Publish to NPM 📦
-       env:
+        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm publish --access public
