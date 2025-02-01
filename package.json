@@ -38,7 +38,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "The BookingJini Icons project is a structured repository for converting SVG icons to web fonts using `fantasticon`, `svgo`, and `oslllo-svg-fixer`. This project follows an automated workflow to ensure smooth processing, optimization, and publishing of the icons to npm."
+    "url": "https://github.com/ramanujamgond/bookingjini-icons.git"
   },
   "author": "Ramanujam Gond"
 }
