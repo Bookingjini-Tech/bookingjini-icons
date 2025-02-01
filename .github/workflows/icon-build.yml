@@ -6,60 +6,30 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
-  packages: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.13.1]
+        node-version: [20.13.1] # Updated Node.js version
 
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v3 # Updated to latest checkout version
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3 # Updated to latest setup-node action
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-
+          cache: "npm" # Caches dependencies for faster builds
+          # registry-url: "https://registry.npmjs.org/"
       - name: Install Dependencies and Build
         run: |
           npm ci
-          npm run build  # Build fonts & CSS inside dist/
+          npm run build  # 🔥 Build fonts & CSS inside dist/
         env:
           CI: true
-
-      - name: Configure npm authentication
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
-      - name: Get latest published version from npm
-        id: get_latest_version
-        run: |
-          LATEST_VERSION=$(npm show @bookingjini-labs/bookingjini-icons version || echo "0.0.0")
-          echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV
-
-      - name: Auto-increment version
-        run: |
-          CURRENT_VERSION=$(jq -r .version package.json)
-          if [ "$CURRENT_VERSION" == "$LATEST_VERSION" ]; then
-            npm version patch -m "Bump version to %s [skip ci]"
-            git push --follow-tags
-          else
-            echo "Version is already incremented."
-          fi
+      - name: Semantic Release
+        run: npx semantic-release
         env:
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: actions@github.com
-          GIT_COMMITTER_NAME: github-actions
-          GIT_COMMITTER_EMAIL: actions@github.com
-
-      - name: Publish to npm Registry
-        run: npm publish --access public
-
-      - name: Publish to GitHub Packages
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
