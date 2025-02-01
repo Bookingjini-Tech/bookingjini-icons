@@ -6,6 +6,7 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
+  packages: write # Added to enable GitHub Packages publishing
 
 jobs:
   build:
@@ -30,7 +31,15 @@ jobs:
         env:
           CI: true
 
-      - name: Publish to NPM
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # Configure npm registry authentication
+      - name: Configure npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to npm Registry
         run: npm publish --access public
+
+      - name: Publish to GitHub Packages
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
