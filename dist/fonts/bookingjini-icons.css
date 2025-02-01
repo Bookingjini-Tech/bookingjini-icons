@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "bookingjini-icons";
+    src: url("./bookingjini-icons.woff2?2a9ff22a85aa5816f5be7d0b762bbfec") format("woff2"),
+url("./bookingjini-icons.woff?2a9ff22a85aa5816f5be7d0b762bbfec") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: bookingjini-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-24-hour-front-desk_dual-tone:before {
+    content: "\f101";
+}
+.icon-24-hour-front-desk_fill:before {
+    content: "\f102";
+}
+.icon-24-hour-front-desk_line:before {
+    content: "\f103";
+}
+.icon-24-Hour-Security_dual-tone:before {
+    content: "\f104";
+}
+.icon-24-Hour-Security_fill:before {
+    content: "\f105";
+}
+.icon-24-Hour-Security_line:before {
+    content: "\f106";
+}
