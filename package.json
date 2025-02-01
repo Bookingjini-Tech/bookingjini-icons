@@ -1,5 +1,5 @@
 {
-  "name": "@bookingjini/bookingjini-icons",
+  "name": "@bookingjini-labs/bookingjini-icons",
   "description": "A custom icon font library for BookingJini",
   "version": "1.0.0",
   "main": "dist/fonts/bookingjini-icons.css",
@@ -9,6 +9,9 @@
   "files": [
     "dist/fonts/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "scripts": {
     "build": "npm run icons:fix && npm run icons:compress && npm run icons:font",
