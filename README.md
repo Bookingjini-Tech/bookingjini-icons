@@ -45,7 +45,7 @@ npm install @bookingjini-labs/bookingjini-icons
 Then, in your CSS:
 
 ```css
-import "@bookingjini-labs/bookingjini-icons/bookingjini-icons.css";
+import "@bookingjini-labs/bookingjini-icons/fonts/bookingjini-icons.css";
 ```
 
 ## 📦 Use the Icon Library via CDN
