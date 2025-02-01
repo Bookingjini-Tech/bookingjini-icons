@@ -4,7 +4,10 @@
   "version": "1.0.0",
   "main": "dist/fonts/bookingjini-icons.css",
   "exports": {
-    "./bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css"
+    ".": {
+      "import": "./dist/fonts/bookingjini-icons.css",
+      "default": "./dist/fonts/bookingjini-icons.css"
+    }
   },
   "files": [
     "dist/fonts/"
