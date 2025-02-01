@@ -1,6 +1,6 @@
 # BookingJini Icons
 
-![BookingJini Icons](https://github.com/user-attachments/assets/56773076-97ee-48f8-b041-9a00042dd123)
+![bookingjini-icons-frame](https://github.com/user-attachments/assets/7dd167d0-ed9e-4789-b108-120e4929a188)
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/ramanujamgond/bookingjini-icons)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ramanujamgond/bookingjini-icons)
@@ -11,9 +11,57 @@
 
 The **BookingJini Icons** project is a structured repository for converting **SVG icons to web fonts** using `fantasticon`, `svgo`, and `oslllo-svg-fixer`. This project follows an automated workflow to ensure smooth processing, optimization, and publishing of the icons to npm.
 
+## 💾 Installation
+
+Ensure you have **Node.js 20.13.1** installed.
+
+> **Note:** This version is specifically used as `fantasticon` is throwing some errors on the updated version. Any fix to this problem is much appreciated.
+
+### **1️⃣ Clone the Repository**
+
+```sh
+git clone https://github.com/your-repository/bookingjini-icons.git
+cd bookingjini-icons
+```
+
+### **2️⃣ Install Dependencies**
+
+```sh
+npm install
+```
+
+## 🔧 Usage
+
+You can install and use the icon font in any project:
+
+```sh
+npm install @bookingjini-labs/bookingjini-icons
+```
+
+Then, in your CSS:
+
+```css
+import "bookingjini-icons/dist/fonts/bookingjini-icons.css";
+```
+
+## 📦 Use the Icon Library via CDN
+
+You can use the BookingJini Icons library without installing it by including the following CDN link:
+
+```html
+<!-- Add this inside your HTML file -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bookingjini-icons/dist/fonts/bookingjini-icons.css">
+```
+
+You can use the icons in your HTML like this:
+
+```sh
+<i class="icon-home"></i>
+```
+
 ### 📌 Note
 
-### 🚀 **Why We Built This Icon Library**
+#### 🚀 **Why We Built This Icon Library**
 
 At **BookingJini Labs**, we needed a **scalable and maintainable icon library** to streamline our design and development workflow. In the past, we attempted to build an **open-source icon library**, even listing it in **Google Summer of Code (GSoC)** to encourage community contributions. However, managing **unstructured changes** became overwhelming, leading to inconsistencies, and the project was eventually **discontinued**.
 
@@ -56,23 +104,6 @@ bookingjini-icons/
 └── README.md       # 📖 Documentation
 ```
 
-## 💾 Installation
-
-Ensure you have **Node.js** installed.
-
-### **1️⃣ Clone the Repository**
-
-```sh
-git clone https://github.com/your-repository/bookingjini-icons.git
-cd bookingjini-icons
-```
-
-### **2️⃣ Install Dependencies**
-
-```sh
-npm install
-```
-
 ## 🛠 Tools Used
 
 To process and convert SVG icons into a web font, we use the following npm tools:
@@ -91,27 +122,38 @@ The `package.json` file defines project metadata and scripts. Below is a breakdo
 
 ```json
 {
-  "name": "bookingjini-icons",
+  "name": "@bookingjini-labs/bookingjini-icons",
+  "description": "A custom icon font library for BookingJini",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/fonts/bookingjini-icons.css",
+  "exports": {
+    "./bookingjini-icons.css": "./dist/fonts/bookingjini-icons.css"
+  },
+  "files": [
+    "dist/fonts/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "npm run icons:fix && npm run icons:compress && npm run icons:font",
-    "icons:fix": "node node_modules/oslllo-svg-fixer/src/cli.js -s=icons-source -d=icons-dist",
-    "icons:compress": "svgo icons-dist -o font-dist --config=svgo.config.js",
-    "icons:font": "fantasticon icons-dist -o font-dist --name bookingjini-icons --font-height 100",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "icons:fix": "node node_modules/oslllo-svg-fixer/src/cli.js -s=src/svg -d=dist/svg",
+    "icons:compress": "svgo dist/svg -o dist/svg --config=svgo.config.js",
+    "icons:font": "fantasticon"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "oslllo-svg-fixer": "^5.0.0"
   },
   "devDependencies": {
-    "svgo": "^3.3.2",
-    "fantasticon": "^2.0.0"
-  }
+    "fantasticon": "^1.2.3",
+    "svgo": "^3.3.2"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramanujamgond/bookingjini-icons.git"
+  },
 }
 ```
 
@@ -146,20 +188,6 @@ This repository includes an **automated workflow** inside `.github/workflows/` t
 - 🛠 **Processing & optimizing SVG icons**
 - 🎨 **Generating web fonts using `fantasticon`**
 - 📦 **Publishing to npm**
-
-## 🔧 Usage
-
-Once published, you can install and use the icon font in any project:
-
-```sh
-npm install bookingjini-icons
-```
-
-Then, in your CSS:
-
-```css
-import "bookingjini-icons/dist/fonts/bookingjini-icons.css";
-```
 
 ## 🛠 Troubleshooting
 
