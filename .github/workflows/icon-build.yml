@@ -12,21 +12,22 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.13.1] # Updated Node.js version
+        node-version: [20.13.1]
 
     steps:
-      - uses: actions/checkout@v3 # Updated to latest checkout version
+      - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }} 🚀
-        uses: actions/setup-node@v3 # Updated to latest setup-node action
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm" # Caches dependencies for faster builds
+          registry-url: "https://registry.npmjs.org/"
+          cache: "npm"
 
       - name: Install Dependencies and Build
         run: |
           npm ci
-          npm run build  # 🔥 Build fonts & CSS inside dist/
+          npm run build  # Build fonts & CSS inside dist/
         env:
           CI: true
 
@@ -36,8 +37,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-      - name: Publish to NPM 📦
+      - name: Publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm publish --access public
+        run: npm publish --access public
