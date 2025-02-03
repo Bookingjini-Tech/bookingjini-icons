@@ -22,7 +22,7 @@
     "build": "npm run icons:fix && npm run icons:compress && npm run icons:font",
     "icons:fix": "node node_modules/oslllo-svg-fixer/src/cli.js -s=src/svg -d=dist/svg",
     "icons:compress": "svgo dist/svg -o dist/svg --config=svgo.config.js",
-    "icons:font": "fantasticon"
+    "icons:font": "fantasticon dist/svg -o dist/fonts --name bookingjini-icons"
   },
   "dependencies": {
     "oslllo-svg-fixer": "^5.0.0"
