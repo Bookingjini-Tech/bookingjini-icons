@@ -1,7 +1,7 @@
 @font-face {
     font-family: "bookingjini-icons";
-    src: url("./bookingjini-icons.woff2?64ab39713183db5718f9b9bd1841d01e") format("woff2"),
-url("./bookingjini-icons.woff?64ab39713183db5718f9b9bd1841d01e") format("woff");
+    src: url("./bookingjini-icons.woff2?e23d759d667b48a75b57a09564161e9a") format("woff2"),
+url("./bookingjini-icons.woff?e23d759d667b48a75b57a09564161e9a") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
