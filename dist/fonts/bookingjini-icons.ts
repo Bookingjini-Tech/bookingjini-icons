@@ -217,8 +217,8 @@ export type BookingjiniIconsId =
   | "wi-fi-line"
   | "wine-glass-fill"
   | "wine-glass-line"
-  | "Wirlpool-fill"
-  | "Wirlpool-line";
+  | "wirlpool-fill"
+  | "wirlpool-line";
 
 export type BookingjiniIconsKey =
   | "AcFill"
@@ -661,8 +661,8 @@ export enum BookingjiniIcons {
   WiFiLine = "wi-fi-line",
   WineGlassFill = "wine-glass-fill",
   WineGlassLine = "wine-glass-line",
-  WirlpoolFill = "Wirlpool-fill",
-  WirlpoolLine = "Wirlpool-line",
+  WirlpoolFill = "wirlpool-fill",
+  WirlpoolLine = "wirlpool-line",
 }
 
 export const BOOKINGJINI_ICONS_CODEPOINTS: { [key in BookingjiniIcons]: string } = {

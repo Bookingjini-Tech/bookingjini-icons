@@ -1,7 +1,7 @@
 @font-face {
     font-family: "bookingjini-icons";
-    src: url("./bookingjini-icons.woff2?090a3c6d5d0236700c89aa59998893e8") format("woff2"),
-url("./bookingjini-icons.woff?090a3c6d5d0236700c89aa59998893e8") format("woff");
+    src: url("./bookingjini-icons.woff2?de9b0245cbf925552df8272d632ecb8a") format("woff2"),
+url("./bookingjini-icons.woff?de9b0245cbf925552df8272d632ecb8a") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -669,9 +669,9 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-wine-glass-line:before {
     content: "\f1da";
 }
-.icon-Wirlpool-fill:before {
+.icon-wirlpool-fill:before {
     content: "\f1db";
 }
-.icon-Wirlpool-line:before {
+.icon-wirlpool-line:before {
     content: "\f1dc";
 }
