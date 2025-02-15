@@ -1,7 +1,7 @@
 @font-face {
     font-family: "bookingjini-icons";
-    src: url("./bookingjini-icons.woff2?de9b0245cbf925552df8272d632ecb8a") format("woff2"),
-url("./bookingjini-icons.woff?de9b0245cbf925552df8272d632ecb8a") format("woff");
+    src: url("./bookingjini-icons.woff2?39f0df9dee718bceeaf15e2a0f6ef276") format("woff2"),
+url("./bookingjini-icons.woff?39f0df9dee718bceeaf15e2a0f6ef276") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -141,7 +141,7 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-call-bell-line:before {
     content: "\f12a";
 }
-.icon-cards-duo-tone:before {
+.icon-cards-fill:before {
     content: "\f12b";
 }
 .icon-cards-line:before {
@@ -267,10 +267,10 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-dry-clean-line:before {
     content: "\f154";
 }
-.icon-Dryer-fill:before {
+.icon-dryer-fill:before {
     content: "\f155";
 }
-.icon-Dryer-line:before {
+.icon-dryer-line:before {
     content: "\f156";
 }
 .icon-electric-outlet-fill:before {

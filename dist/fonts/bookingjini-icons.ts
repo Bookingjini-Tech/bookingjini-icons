@@ -41,7 +41,7 @@ export type BookingjiniIconsId =
   | "cab-line"
   | "call-bell-fill"
   | "call-bell-line"
-  | "cards-duo-tone"
+  | "cards-fill"
   | "cards-line"
   | "carpet-fill"
   | "carpet-line"
@@ -83,8 +83,8 @@ export type BookingjiniIconsId =
   | "dress-line"
   | "dry-clean-fill"
   | "dry-clean-line"
-  | "Dryer-fill"
-  | "Dryer-line"
+  | "dryer-fill"
+  | "dryer-line"
   | "electric-outlet-fill"
   | "electric-outlet-line"
   | "fence-fill"
@@ -263,7 +263,7 @@ export type BookingjiniIconsKey =
   | "CabLine"
   | "CallBellFill"
   | "CallBellLine"
-  | "CardsDuoTone"
+  | "CardsFill"
   | "CardsLine"
   | "CarpetFill"
   | "CarpetLine"
@@ -485,7 +485,7 @@ export enum BookingjiniIcons {
   CabLine = "cab-line",
   CallBellFill = "call-bell-fill",
   CallBellLine = "call-bell-line",
-  CardsDuoTone = "cards-duo-tone",
+  CardsFill = "cards-fill",
   CardsLine = "cards-line",
   CarpetFill = "carpet-fill",
   CarpetLine = "carpet-line",
@@ -527,8 +527,8 @@ export enum BookingjiniIcons {
   DressLine = "dress-line",
   DryCleanFill = "dry-clean-fill",
   DryCleanLine = "dry-clean-line",
-  DryerFill = "Dryer-fill",
-  DryerLine = "Dryer-line",
+  DryerFill = "dryer-fill",
+  DryerLine = "dryer-line",
   ElectricOutletFill = "electric-outlet-fill",
   ElectricOutletLine = "electric-outlet-line",
   FenceFill = "fence-fill",
@@ -708,7 +708,7 @@ export const BOOKINGJINI_ICONS_CODEPOINTS: { [key in BookingjiniIcons]: string }
   [BookingjiniIcons.CabLine]: "61736",
   [BookingjiniIcons.CallBellFill]: "61737",
   [BookingjiniIcons.CallBellLine]: "61738",
-  [BookingjiniIcons.CardsDuoTone]: "61739",
+  [BookingjiniIcons.CardsFill]: "61739",
   [BookingjiniIcons.CardsLine]: "61740",
   [BookingjiniIcons.CarpetFill]: "61741",
   [BookingjiniIcons.CarpetLine]: "61742",
