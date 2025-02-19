@@ -58,7 +58,7 @@ You can use the BookingJini Icons library without installing it by including the
 <!-- Add this inside your HTML file -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@bookingjini-labs/bookingjini-icons@latest/dist/fonts/bookingjini-icons.css"
+  href="https://cdn.jsdelivr.net/npm/@bookingjini-labs/bookingjini-icons/dist/fonts/bookingjini-icons.css"
 />
 ```
 
