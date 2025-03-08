@@ -25,6 +25,7 @@
     "icons:font": "fantasticon dist/svg -o dist/fonts --name bookingjini-icons"
   },
   "dependencies": {
+    "@bookingjini-labs/bookingjini-icons": "^1.32.0",
     "oslllo-svg-fixer": "^5.0.0"
   },
   "devDependencies": {
