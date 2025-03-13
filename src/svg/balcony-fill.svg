@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 10H16V20H8V10Z" fill="black"/>
+<path d="M8 10V9.25H7.25V10H8ZM16 10H16.75V9.25H16V10ZM16 20V20.75C16.4142 20.75 16.75 20.4142 16.75 20H16ZM8 20H7.25C7.25 20.4142 7.58579 20.75 8 20.75V20ZM8 10.75H16V9.25H8V10.75ZM15.25 10V20H16.75V10H15.25ZM16 19.25H8V20.75H16V19.25ZM8.75 20V10H7.25V20H8.75Z" fill="black"/>
+<path d="M4 20V13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 20V13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 20V13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 20V13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3 13H21" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 3.30884C8.98301 3.66842 7.25 5.63181 7.25 7.99996V8.24996H11.25V3.30884ZM16.75 8.24996V7.99996C16.75 5.63181 15.017 3.66842 12.75 3.30884V8.24996H16.75Z" fill="black"/>
+<path d="M3 20H21" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
